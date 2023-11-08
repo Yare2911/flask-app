@@ -6,7 +6,8 @@ import os
 app = Flask(__name__)
 CORS(app)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgres://jhyoqfgs:f66Q4WOw4sogdhg7J1sTaSdP6p_uVTHQ@trumpet.db.elephantsql.com/jhyoqfgs"
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ["DATABASE_URL"]
+
 db = SQLAlchemy(app)    
 
 
